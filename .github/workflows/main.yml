@@ -20,7 +20,7 @@ jobs:
       - name: Build # build the app in the emscripten container
         run: |
           mkdir -v -p build
-          emscripten/emsdk em++ hello_world.cpp -o build/index.html
+          em++ hello_world.cpp -o build/index.html
 
       - name: Install rsync 📚 # needed for `deploy to github pages` action
         run: |
